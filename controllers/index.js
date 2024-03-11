@@ -4,7 +4,7 @@ export const message = async (req, res) => {
   console.log('message');
   try {
     const payload = req.body;
-    await pusher.trigger(`butterflychat-${payload.idRoom}`, 'message', payload);
+    await pusher.trigger(`chat-${payload.idRoom}`, 'message', payload);
     res.status(201).send(payload);
   } catch (error) {
     console.error('Erreur dans le contrôleur message:', error);
@@ -16,7 +16,7 @@ export const newChatter = async (req, res) => {
   console.log('newChatter');
   try {
     const payload = req.body;
-    await pusher.trigger(`butterflychat-${payload.idRoom}`, 'newChatter', payload);
+    await pusher.trigger(`chat-${payload.idRoom}`, 'newChatter', payload);
     res.status(200).send(payload);
   } catch (error) {
     console.error('Erreur dans le contrôleur message:', error);
@@ -28,7 +28,7 @@ export const chatterLeft = async (req, res) => {
   console.log('chatterLeft');
   try {
     const payload = req.body;
-    await pusher.trigger(`butterflychat-${payload.idRoom}`, 'chatterLeft', payload);
+    await pusher.trigger(`chat-${payload.idRoom}`, 'chatterLeft', payload);
     res.status(200).send(payload);
   } catch (error) {
     console.error('Erreur dans le contrôleur message:', error);
