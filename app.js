@@ -1,6 +1,7 @@
 import express from 'express';
 import http from 'http';
 import dotenv from 'dotenv';
+import dbConnection from './db/connection.js'
 
 const app = express();
 const server = http.createServer(app);
@@ -9,6 +10,8 @@ import index from './routes/index.js';
 
 // Nécessaire pour les .env
 dotenv.config();
+
+dbConnection();
 
 // Nécessaire pour le router
 app.use(express.json());
