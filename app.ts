@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.use('/api/', index);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT ?? 8080;
 
 server.listen(PORT, () => {
   console.log(`Serveur en cours d'exécution sur le port ${PORT}`);

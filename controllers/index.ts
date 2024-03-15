@@ -1,6 +1,8 @@
+import { Request, Response } from 'express';
+
 import pusher from '../pusher.js';
 
-export const message = async (req, res) => {
+export const message = async (req: Request, res: Response) => {
   console.log('message');
   try {
     const payload = req.body;
@@ -12,7 +14,7 @@ export const message = async (req, res) => {
   }
 };
 
-export const newChatter = async (req, res) => {
+export const newChatter = async (req: Request, res: Response) => {
   console.log('newChatter');
   try {
     const payload = req.body;
@@ -24,7 +26,7 @@ export const newChatter = async (req, res) => {
   }
 };
 
-export const chatterLeft = async (req, res) => {
+export const chatterLeft = async (req: Request, res: Response) => {
   console.log('chatterLeft');
   try {
     const payload = req.body;

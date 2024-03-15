@@ -12,5 +12,10 @@
     "mongoose": "^8.2.1",
     "pusher": "^5.2.0",
     "pusher-js": "^8.4.0-rc2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.28",
+    "typescript": "^5.4.2"
   }
 }
