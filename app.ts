@@ -1,7 +1,7 @@
 import express from 'express';
 import http from 'http';
 import dotenv from 'dotenv';
-import dbConnection from './db/connection.js'
+import dbConnection from './db/connection';
 
 const app = express();
 const server = http.createServer(app);

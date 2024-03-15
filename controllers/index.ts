@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import pusher from '../pusher.js';
+import pusher from '../pusher';
 
 export const message = async (req: Request, res: Response) => {
   console.log('message');

@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import { message, newChatter, chatterLeft } from '../controllers/index.js';
+import { message, newChatter, chatterLeft } from '../controllers/index';
 
 router.post('/', message);
 router.post('/newChatter', newChatter);
