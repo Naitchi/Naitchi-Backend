@@ -1,4 +1,4 @@
-import { Card, Color } from '../type/cardType';
+import Card, { Color } from '../type/cardType';
 
 // Give Random Number
 export const getRandomInt = (max: number): number => {
@@ -32,8 +32,8 @@ export const getRandomCard = (): Card | undefined => {
 };
 
 // Give a full hand
-export const getRandomHand = (): (Card | undefined)[] | [] => {
-  const hand: (Card | undefined)[] = [];
+export const getRandomHand = (): Card[] => {
+  const hand: Card[] = [];
   for (let i = 0; i < 9; i++) {
     const newCard: Card | undefined = getRandomCard();
     if (newCard) hand.push(newCard);
@@ -42,8 +42,8 @@ export const getRandomHand = (): (Card | undefined)[] | [] => {
   return hand;
 };
 
-export const getCardUntil = (actualCard: Card): (Card | undefined)[] | [] => {
-  const drawnCards: (Card | undefined)[] = [];
+export const getCardUntil = (actualCard: Card): Card[] => {
+  const drawnCards: Card[] = [];
   let newCard: Card | undefined;
 
   do {
@@ -60,5 +60,15 @@ export const getCardUntil = (actualCard: Card): (Card | undefined)[] | [] => {
   } while (true);
 
   if (newCard) drawnCards.push(newCard);
+  return drawnCards;
+};
+
+export const drawCards = (cardsNumber: number): Card[] => {
+  const drawnCards: Card[] = [];
+  for (let i = 0; i < cardsNumber; i++) {
+    const newCard: Card | undefined = getRandomCard();
+    if (newCard) drawnCards.push(newCard);
+    else return [];
+  }
   return drawnCards;
 };

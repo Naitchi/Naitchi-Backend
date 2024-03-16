@@ -1,11 +1,4 @@
-export default interface Party {
-  id: number;
-  name: string;
-  createdBy: number;
-  // rules:;
-}
-
-export interface Card {
+export default interface Card {
   card: number;
   color: Color;
 }
