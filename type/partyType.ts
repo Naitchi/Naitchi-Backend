@@ -1,7 +1,8 @@
+import mongoose from 'mongoose';
 import Card from './cardType';
 
 export default interface Party {
-  id: string;
+  id: mongoose.Types.ObjectId;
   owner: [Player];
   players: Player[];
   rules: rule[];
@@ -10,6 +11,7 @@ export default interface Party {
 }
 
 export interface Player {
+  id: mongoose.Types.ObjectId;
   ip: string;
   name: string;
   hand: Card[];

@@ -4,8 +4,8 @@ export default interface Card {
 }
 
 export enum Color {
-  RED = 'red',
-  BLUE = 'blue',
-  GREEN = 'green',
-  YELLOW = 'yellow',
+  RED = 'RED',
+  BLUE = 'BLUE',
+  GREEN = 'GREEN',
+  YELLOW = 'YELLOW',
 }
